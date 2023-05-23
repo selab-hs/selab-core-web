@@ -53,7 +53,7 @@ export default function Header() {
         {isClubPage && <AiOutlineMenu onClick={onMenuClick} size="30" />}
       <StyledNav>
         <StyledLink to="/" style={{ fontSize: "20px" }}>
-          Oing
+          Selab
         </StyledLink>
         {isLogIn && (
           <>
