@@ -1,13 +1,13 @@
 import axios from "axios";
 import { message } from "antd";
-import { API_SUCCESS, BAD_REQUEST, SERVER_ERROR } from "./constant";
+import { API_CREATE_SUCCESS, BAD_REQUEST, SERVER_ERROR } from "./constant";
 import { API_HOST } from "../common/constant";
 
 export async function signupApi({ url, data, params = {} }) {
   url = API_HOST + url;
   try {
     const res = await axios({ url, method: "post", params, data });
-    if (res.status !== API_SUCCESS) {
+    if (res.status !== API_CREATE_SUCCESS) {
       message.error("서버에서 에러가 났습니다. 다시 시도해주세요.");
     }
     message.success("회원가입에 성공하였습니다!");

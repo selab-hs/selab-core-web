@@ -6,7 +6,7 @@ import { signupApi } from "../../api/signupApi";
 
 function* fetchSignup({ name, nickname, email, password, phoneNumber }) {
   const { isSuccess } = yield call(signupApi, {
-    url: "/api/member/sign",
+    url: "/api/v1/auth/sign",
     data: {
       name,
       nickname,
@@ -22,7 +22,7 @@ function* fetchSignup({ name, nickname, email, password, phoneNumber }) {
 
 function* fetchLogin({ email, password }) {
   const { isSuccess, data } = yield call(loginApi, {
-    url: "/api/member/login",
+    url: "/api/v1/auth/login",
     data: {
       email,
       password,
